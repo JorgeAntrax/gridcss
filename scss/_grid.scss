@@ -5,6 +5,7 @@
     &.nowrap {
         flex-wrap: nowrap;
     }
+
     &:not([autofill]),
     &:not([breakpoint]),
     &:not([autodense]) {
@@ -12,6 +13,7 @@
             flex-direction: row;
         }
     }
+
     &[autofill] {
         &>*:not([clearfix]) {
             flex: 1;
@@ -36,6 +38,9 @@
         @include since(d) {
             flex-direction: row;
         }
+    }
+    &.column {
+        flex-direction: column;
     }
 }
 
@@ -84,6 +89,60 @@
     width: 100%;
     @include since(t) {
         width: 50%;
+    }
+}
+
+@each $class,
+$value in $breakpoint {
+    @include since ($class) {
+        @for $i from 1 through 20 {
+            @if $i==20 {
+                .block {
+                    width: grid($i);
+                }
+            }
+            @else if $i==10 {
+                .half {
+                    width: grid($i);
+                }
+            }
+            @else {
+                .base#{$i} {
+                    width: grid($i);
+                }
+            }
+        }
+        .hidden {
+            display: none;
+        }
+        .center {
+            align-items: center;
+            justify-content: center;
+        }
+        .center-v {
+            align-items: center;
+        }
+        .center-h {
+            justify-content: center;
+        }
+        .top {
+            align-items: flex-start;
+        }
+        .left {
+            justify-content: flex-start;
+        }
+        .bottom {
+            align-items: flex-end;
+        }
+        .right {
+            justify-content: flex-end;
+        }
+        .separated {
+            justify-content: space-between;
+        }
+        .distributed {
+            justify-content: space-around;
+        }
     }
 }
 

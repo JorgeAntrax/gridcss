@@ -7,20 +7,511 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
     <link rel="stylesheet" href="css/app.css">
+    <style>
+        * {
+            font-size: 12px;
+            font-weight: normal;
+        }
+        .child {
+            padding: 0.5rem;
+            background-color: #000944;
+            border-radius: 4px;
+            margin: 2px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #fff;
+        }
+        h1  {
+            font-size: 3rem;
+        }
+
+        .label {
+            background-color: #00d68b;
+            display: inline-flex;
+            border-radius: 4rem;
+            color: #fff;
+            padding: 0 1.25rem;
+            font-size: inherit;
+            margin: 0 10px;
+        }
+        
+        [wp] {
+            min-height: 150px;
+            border-radius: 10px;
+            background-color: #f5f5f5;
+            margin-bottom: 2rem;
+            padding: 2rem;
+        }
+        a {
+            font-size: inherit;
+            color: #00d68b;
+        }
+        small {
+            font-size: 10px;
+        }
+    </style>
 </head>
 
-<body debug>
+<body>
     <section wrapper>
-        <div class="flex" autofill breakpoint="desktop" debug>
-            <div class="half-m" clearfix>234f</div>
-            <div>234f</div>
-            <div>234f</div>
-            <div>234f</div>
-            <div>234f</div>
-            <div>234f</div>
+        <div class="flex center padding-4 opacity-7">
+            <h1>Grid CSS Small Library</h1>
+        </div>
+        <div class="flex center">
+            <h3 class="opacity-8 padding-2">Usando la clase <span class="label">.flex</span> y el atributo <span class="label">[autofill]</span></h3>
+        </div>
+        <div class="flex" autofill>
+            <div class="child">20 Cols</div>
+        </div>
+        <div class="flex" autofill>
+            <div class="child">C1</div>
+            <div class="child">C2</div>
+        </div>
+        <div class="flex" autofill>
+            <div class="child">C1</div>
+            <div class="child">C2</div>
+            <div class="child">C3</div>
+        </div>
+        <div class="flex" autofill>
+            <div class="child">C1</div>
+            <div class="child">C2</div>
+            <div class="child">C3</div>
+            <div class="child">C4</div>
+        </div>
+        <div class="flex" autofill>
+            <div class="child">C1</div>
+            <div class="child">C2</div>
+            <div class="child">C3</div>
+            <div class="child">C4</div>
+            <div class="child">C5</div>
+        </div>
+        <div class="flex" autofill>
+            <div class="child">C1</div>
+            <div class="child">C2</div>
+            <div class="child">C3</div>
+            <div class="child">C4</div>
+            <div class="child">C5</div>
+            <div class="child">C6</div>
+        </div>
+        <div class="flex" autofill>
+            <div class="child">C1</div>
+            <div class="child">C2</div>
+            <div class="child">C3</div>
+            <div class="child">C4</div>
+            <div class="child">C5</div>
+            <div class="child">C6</div>
+            <div class="child">C7</div>
+        </div>
+        <div class="flex" autofill>
+            <div class="child">C1</div>
+            <div class="child">C2</div>
+            <div class="child">C3</div>
+            <div class="child">C4</div>
+            <div class="child">C5</div>
+            <div class="child">C6</div>
+            <div class="child">C7</div>
+            <div class="child">C8</div>
+        </div>
+        <div class="flex" autofill>
+            <div class="child">C1</div>
+            <div class="child">C2</div>
+            <div class="child">C3</div>
+            <div class="child">C4</div>
+            <div class="child">C5</div>
+            <div class="child">C6</div>
+            <div class="child">C7</div>
+            <div class="child">C8</div>
+            <div class="child">C9</div>
+        </div>
+        <div class="flex" autofill>
+            <div class="child">C1</div>
+            <div class="child">C2</div>
+            <div class="child">C3</div>
+            <div class="child">C4</div>
+            <div class="child">C5</div>
+            <div class="child">C6</div>
+            <div class="child">C7</div>
+            <div class="child">C8</div>
+            <div class="child">C9</div>
+            <div class="child">C10</div>
+        </div>
+        <div class="flex" autofill="">
+            <div class="child">C1</div>
+            <div class="child">C2</div>
+            <div class="child">C3</div>
+            <div class="child">C4</div>
+            <div class="child">C5</div>
+            <div class="child">C6</div>
+            <div class="child">C7</div>
+            <div class="child">C8</div>
+            <div class="child">C9</div>
+            <div class="child">C10</div>
+            <div class="child">C11</div>
+        </div>
+        <div class="flex" autofill="">
+            <div class="child">C1</div>
+            <div class="child">C2</div>
+            <div class="child">C3</div>
+            <div class="child">C4</div>
+            <div class="child">C5</div>
+            <div class="child">C6</div>
+            <div class="child">C7</div>
+            <div class="child">C8</div>
+            <div class="child">C9</div>
+            <div class="child">C10</div>
+            <div class="child">C11</div>
+            <div class="child">C12</div>
+        </div>
+        <div class="flex" autofill="">
+            <div class="child">C1</div>
+            <div class="child">C2</div>
+            <div class="child">C3</div>
+            <div class="child">C4</div>
+            <div class="child">C5</div>
+            <div class="child">C6</div>
+            <div class="child">C7</div>
+            <div class="child">C8</div>
+            <div class="child">C9</div>
+            <div class="child">C10</div>
+            <div class="child">C11</div>
+            <div class="child">C12</div>
+            <div class="child">C13</div>
+        </div>
+        <div class="flex" autofill="">
+            <div class="child">C1</div>
+            <div class="child">C2</div>
+            <div class="child">C3</div>
+            <div class="child">C4</div>
+            <div class="child">C5</div>
+            <div class="child">C6</div>
+            <div class="child">C7</div>
+            <div class="child">C8</div>
+            <div class="child">C9</div>
+            <div class="child">C10</div>
+            <div class="child">C11</div>
+            <div class="child">C12</div>
+            <div class="child">C13</div>
+            <div class="child">C14</div>
+        </div>
+        <div class="flex" autofill="">
+            <div class="child">C1</div>
+            <div class="child">C2</div>
+            <div class="child">C3</div>
+            <div class="child">C4</div>
+            <div class="child">C5</div>
+            <div class="child">C6</div>
+            <div class="child">C7</div>
+            <div class="child">C8</div>
+            <div class="child">C9</div>
+            <div class="child">C10</div>
+            <div class="child">C11</div>
+            <div class="child">C12</div>
+            <div class="child">C13</div>
+            <div class="child">C14</div>
+            <div class="child">C15</div>
+        </div>
+        <div class="flex" autofill="">
+            <div class="child">C1</div>
+            <div class="child">C2</div>
+            <div class="child">C3</div>
+            <div class="child">C4</div>
+            <div class="child">C5</div>
+            <div class="child">C6</div>
+            <div class="child">C7</div>
+            <div class="child">C8</div>
+            <div class="child">C9</div>
+            <div class="child">C10</div>
+            <div class="child">C11</div>
+            <div class="child">C12</div>
+            <div class="child">C13</div>
+            <div class="child">C14</div>
+            <div class="child">C15</div>
+            <div class="child">C16</div>
+        </div>
+        <div class="flex" autofill="">
+            <div class="child">C1</div>
+            <div class="child">C2</div>
+            <div class="child">C3</div>
+            <div class="child">C4</div>
+            <div class="child">C5</div>
+            <div class="child">C6</div>
+            <div class="child">C7</div>
+            <div class="child">C8</div>
+            <div class="child">C9</div>
+            <div class="child">C10</div>
+            <div class="child">C11</div>
+            <div class="child">C12</div>
+            <div class="child">C13</div>
+            <div class="child">C14</div>
+            <div class="child">C15</div>
+            <div class="child">C16</div>
+            <div class="child">C17</div>
+        </div>
+        <div class="flex" autofill="">
+            <div class="child">C1</div>
+            <div class="child">C2</div>
+            <div class="child">C3</div>
+            <div class="child">C4</div>
+            <div class="child">C5</div>
+            <div class="child">C6</div>
+            <div class="child">C7</div>
+            <div class="child">C8</div>
+            <div class="child">C9</div>
+            <div class="child">C10</div>
+            <div class="child">C11</div>
+            <div class="child">C12</div>
+            <div class="child">C13</div>
+            <div class="child">C14</div>
+            <div class="child">C15</div>
+            <div class="child">C16</div>
+            <div class="child">C17</div>
+            <div class="child">C18</div>
+        </div>
+        <div class="flex" autofill="">
+            <div class="child">C1</div>
+            <div class="child">C2</div>
+            <div class="child">C3</div>
+            <div class="child">C4</div>
+            <div class="child">C5</div>
+            <div class="child">C6</div>
+            <div class="child">C7</div>
+            <div class="child">C8</div>
+            <div class="child">C9</div>
+            <div class="child">C10</div>
+            <div class="child">C11</div>
+            <div class="child">C12</div>
+            <div class="child">C13</div>
+            <div class="child">C14</div>
+            <div class="child">C15</div>
+            <div class="child">C16</div>
+            <div class="child">C17</div>
+            <div class="child">C18</div>
+            <div class="child">C19</div>
+        </div>
+        <div class="flex" autofill>
+            <div class="child">C1</div>
+            <div class="child">C2</div>
+            <div class="child">C3</div>
+            <div class="child">C4</div>
+            <div class="child">C5</div>
+            <div class="child">C6</div>
+            <div class="child">C7</div>
+            <div class="child">C8</div>
+            <div class="child">C9</div>
+            <div class="child">C10</div>
+            <div class="child">C11</div>
+            <div class="child">C12</div>
+            <div class="child">C13</div>
+            <div class="child">C14</div>
+            <div class="child">C15</div>
+            <div class="child">C16</div>
+            <div class="child">C17</div>
+            <div class="child">C18</div>
+            <div class="child">C19</div>
+            <div class="child">C20</div>
+        </div>
+
+        <div class="flex center">
+            <h3 class="opacity-8 padding-2">Usando la clase <span class="label">.flex</span> sin el atributo <span class="label">[autofill]</span></h3>
+        </div>
+
+        <div class="flex">
+            <div class="child">20 Cols</div>
+        </div>
+        <div class="flex">
+            <div class="child">C1</div>
+            <div class="child">C2</div>
+        </div>
+        <div class="flex">
+            <div class="child">C1</div>
+            <div class="child">C2</div>
+            <div class="child">C3</div>
+        </div>
+        <div class="flex">
+            <div class="child">C1</div>
+            <div class="child">C2</div>
+            <div class="child">C3</div>
+            <div class="child">C4</div>
+        </div>
+        <div class="flex">
+            <div class="child">C1</div>
+            <div class="child">C2</div>
+            <div class="child">C3</div>
+            <div class="child">C4</div>
+            <div class="child">C5</div>
+        </div>
+
+        <div class="flex center">
+            <h3 class="opacity-8 padding-2">El atributo <span class="label">[clearfix]</span> permite establcer un ancho fijo cuando habilitas el autofill</h3>
+        </div>
+
+        <div class="flex" autofill>
+            <div class="child">C1</div>
+            <div class="child">C2</div>
+            <div class="child half" clearfix><span class="label">[clearfix]</span> con width 50%</div>
+            <div class="child">C4</div>
+            <div class="child">C5</div>
+        </div>
+
+        <div class="flex center">
+            <h3 class="opacity-8 padding-2">Define un ancho especifico Usando las clases <span class="label">.base</span> del 1 al 20</h3>
+        </div>
+
+        <div class="flex">
+            <div class="child base5">25% de ancho coloca la clase <span class="label">.base5</span></div>
+        </div>
+        <div class="flex" autofill="">
+            <div class="child">clase <span class="label">half</span> = 50% ancho</div>
+            <div class="child">clase <span class="label">half</span> = 50% ancho</div>
+        </div>
+        <div class="flex center">
+            <h3 class="opacity-8 padding-2">Un número del 1 al 20 multiplicado por <span class="label">.5</span> retorna el ancho en porcentaje</h3>
+        </div>
+        <div class="flex">
+            <div class="child base6"><span class="label">base6</span> = 6x5 = 30% de ancho</div>
+            <div class="child base6"><span class="label">base6</span> = 6x5 = 30% de ancho</div>
+            <div class="child base8"><span class="label">base8</span> = 8x5 = 40% de ancho</div>
+        </div>
+        <div class="flex center">
+            <h3 class="opacity-8 padding-2">La clase <span class="label">.nowrap</span> evita el salto de linea</h3>
+        </div>
+        <div class="flex nowrap">
+            <div class="child base6"><span class="label">base6</span> = 6x5 = 30% de ancho</div>
+            <div class="child base6"><span class="label">base6</span> = 6x5 = 30% de ancho</div>
+            <div class="child base8"><span class="label">base8</span> = 8x5 = 40% de ancho</div>
+        </div>
+        <div class="flex">
+            <div class="child">C1</div>
+            <div class="child">C2</div>
+            <div class="child">C3</div>
+            <div class="child">C4</div>
+        </div>
+        <div class="flex">
+            <div class="child">C1</div>
+            <div class="child">C2</div>
+            <div class="child">C3</div>
+            <div class="child">C4</div>
+            <div class="child">C5</div>
+        </div>
+
+        <div class="flex center padding-4 opacity-7">
+            <h1>Grid CSS  | Alignment</h1>
+        </div>
+
+        <div class="flex center">
+            <h3 class="opacity-8 padding-2">centrado absoluto con <span class="label">.center</span></h3>
+        </div>
+
+        <div class="flex center" wp>
+            <div class="child">C1</div>
+            <div class="child">C2</div>
+            <div class="child">C3</div>
+            <div class="child">C4</div>
+            <div class="child">C5</div>
+        </div>
+
+        <div class="flex center">
+            <h3 class="opacity-8 padding-2">centrado vertical con <span class="label">.center-v</span></h3>
+        </div>
+
+        <div class="flex center-v" wp>
+            <div class="child">C1</div>
+            <div class="child">C2</div>
+            <div class="child">C3</div>
+            <div class="child">C4</div>
+            <div class="child">C5</div>
+        </div>
+
+        <div class="flex center">
+            <h3 class="opacity-8 padding-2">centrado horizontal con <span class="label">.center-h</span></h3>
+        </div>
+
+        <div class="flex center-h" wp>
+            <div class="child">C1</div>
+            <div class="child">C2</div>
+            <div class="child">C3</div>
+            <div class="child">C4</div>
+            <div class="child">C5</div>
+        </div>
+
+        <div class="flex center">
+            <h3 class="opacity-8 padding-2">Distribucion de espacio con <span class="label">.distributed</span></h3>
+        </div>
+
+        <div class="flex center-v distributed" wp>
+            <div class="child">C1</div>
+            <div class="child">C2</div>
+            <div class="child">C3</div>
+            <div class="child">C4</div>
+            <div class="child">C5</div>
+        </div>
+
+        <div class="flex center">
+            <h3 class="opacity-8 padding-2">Separar items con <span class="label">.separated</span></h3>
+        </div>
+
+        <div class="flex center-v separated" wp>
+            <div class="child">C1</div>
+            <div class="child">C2</div>
+            <div class="child">C3</div>
+            <div class="child">C4</div>
+            <div class="child">C5</div>
+        </div>
+
+        <div class="flex center">
+            <h3 class="opacity-8 padding-2">Alinear arriba con <span class="label">.top</span></h3>
+        </div>
+
+        <div class="flex center-h top" wp>
+            <div class="child">C1</div>
+            <div class="child">C2</div>
+            <div class="child">C3</div>
+            <div class="child">C4</div>
+            <div class="child">C5</div>
+        </div>
+
+        <div class="flex center">
+            <h3 class="opacity-8 padding-2">Alinear abajo con <span class="label">.bottom</span></h3>
+        </div>
+
+        <div class="flex center-h bottom" wp>
+            <div class="child">C1</div>
+            <div class="child">C2</div>
+            <div class="child">C3</div>
+            <div class="child">C4</div>
+            <div class="child">C5</div>
+        </div>
+
+        <div class="flex center">
+            <h3 class="opacity-8 padding-2">Alinear derecha con <span class="label">.right</span></h3>
+        </div>
+
+        <div class="flex center-v right" wp>
+            <div class="child">C1</div>
+            <div class="child">C2</div>
+            <div class="child">C3</div>
+            <div class="child">C4</div>
+            <div class="child">C5</div>
+        </div>
+
+        <div class="flex center">
+            <h3 class="opacity-8 padding-2">Cambiar flujo a columnas con <span class="label">.column</span></h3>
+        </div>
+
+        <div class="flex column center" wp>
+            <div class="child">C1</div>
+            <div class="child">C2</div>
+            <div class="child">C3</div>
+            <div class="child">C4</div>
+            <div class="child">C5</div>
         </div>
 
     </section>
+    <footer class="flex center padding-1" wp style="margin:0; min-height: auto;">
+        <img src="https://digitalbooting.com/images/logo.png" alt="Digital Booting" style="width:20px;height:20px;object-fit: contain; margin-right: 0.5rem;">
+        <small>Library designed by <a href="https://digitalbooting.com">Digital Booting</a></small>
+    </footer>
 </body>
 
 
