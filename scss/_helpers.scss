@@ -1,0 +1,68 @@
+// helpers de reset to margin and padding
+.marginless {
+    margin: 0 !important;
+}
+
+.paddingless {
+    padding: 0 !important;
+}
+
+// print the margin and padding helper class
+@for $i from 1 through 8 {
+    .padding-#{$i} {
+        padding: #{$i/2}rem;
+    }
+    .margin-#{$i} {
+        margin: #{$i/2}rem;
+    }
+    .padding-v-#{$i} {
+        padding: #{$i/2}rem 0;
+    }
+    .margin-v-#{$i} {
+        margin: #{$i/2}rem 0;
+    }
+    .padding-h-#{$i} {
+        padding: 0 #{$i/2}rem;
+    }
+    .margin-h-#{$i} {
+        margin: 0 #{$i/2}rem;
+    }
+    .padding-t-#{$i} {
+        padding-top: #{$i/2}rem;
+    }
+    .margin-t-#{$i} {
+        margin-top: #{$i/2}rem;
+    }
+    .padding-b-#{$i} {
+        padding-bottom: #{$i/2}rem;
+    }
+    .margin-b-#{$i} {
+        margin-bottom: #{$i/2}rem;
+    }
+    .padding-l-#{$i} {
+        padding-left: #{$i/2}rem;
+    }
+    .margin-l-#{$i} {
+        margin-left: #{$i/2}rem;
+    }
+    .padding-r-#{$i} {
+        padding-right: #{$i/2}rem;
+    }
+    .margin-r-#{$i} {
+        margin-right: #{$i/2}rem;
+    }
+}
+
+// print the opacity class range
+@for $i from 0 through 9 {
+    @if $i==0 {
+        .opacity-0 {
+            opacity: 0;
+        }
+    }
+    @else {
+        .opacity-#{$i} {
+            opacity: #{'.'}$i;
+        }
+    }
+}

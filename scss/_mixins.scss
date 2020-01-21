@@ -1,0 +1,84 @@
+//check the variables in _variables.scss
+@mixin since ($point) {
+    @if $point==$bp-mobile {
+        @media screen and (min-width: map-get($breakpoint, m)) {
+            @content
+        }
+    }
+    @else if $point==$bp-touch {
+        @media screen and (min-width: map-get($breakpoint, t)) {
+            @content
+        }
+    }
+    @else if $point==$bp-tablet {
+        @media screen and (min-width: map-get($breakpoint, tb)) {
+            @content
+        }
+    }
+    @else if $point==$bp-desktop {
+        @media screen and (min-width: map-get($breakpoint, d)) {
+            @content
+        }
+    }
+    @else if $point==$bp-widescreen {
+        @media screen and (min-width: map-get($breakpoint, hd)) {
+            @content
+        }
+    }
+    @else {
+        @media screen and (min-width: $point) {
+            @content
+        }
+    }
+}
+
+@mixin only ($point, $point2: map-get($breakpoint, hd)) {
+    @if $point=='only-#{$bp-touch}' {
+        @media screen and (min-width: map-get($breakpoint, m)) and (max-width: map-get($only-breakpoint, only-touch)) {
+            @content
+        }
+    }
+    @else if $point=='only-#{$bp-tablet}' {
+        @media screen and (min-width: map-get($breakpoint, t)) and (max-width: map-get($only-breakpoint, only-tablet)) {
+            @content
+        }
+    }
+    @else if $point=='only-#{$bp-desktop}' {
+        @media screen and (min-width: map-get($breakpoint, tb)) and (max-width: map-get($only-breakpoint, only-desktop)) {
+            @content
+        }
+    }
+    @else {
+        @media screen and (min-width: $point) and (max-width: $point2) {
+            @content
+        }
+    }
+}
+
+@mixin until ($point) {
+    @if $point==$bp-touch {
+        @media screen and (max-width: map-get($breakpoint, t)) {
+            @content
+        }
+    }
+    @else if $point==$bp-tablet {
+        @media screen and (max-width: map-get($breakpoint, tb)) {
+            @content
+        }
+    }
+    @else if $point==$bp-desktop {
+        @media screen and (max-width: map-get($breakpoint, d)) {
+            @content
+        }
+    }
+    @else if $point==$bp-widescreen {
+        @media screen and (max-width: map-get($breakpoint, hd)) {
+            @content
+        }
+    }
+    @else {
+        @media screen and (max-width: $point) {
+            @content
+        }
+    }
+}

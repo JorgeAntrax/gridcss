@@ -1,0 +1,19 @@
+//funcion que general el grid system
+@function grid($cols, $total-cols: 20) {
+    @return percentage($cols / $total-cols);
+}
+
+// function para convertir px en rem
+@function rem ($size, $unity: $text-default) {
+    $remSize: $size / $unity;
+    @return $remSize * 1rem;
+}
+
+//layer z-index function
+@function layer ($name) {
+    @if map-has-key($layer, $name) {
+        @return map-get($layer, $name);
+    }
+    @warn "The key #{$name} is not defined in the map $layers in file base/_mixins.scss";
+    @return null;
+}

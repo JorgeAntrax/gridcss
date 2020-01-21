@@ -1,0 +1,153 @@
+.flex {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    &.nowrap {
+        flex-wrap: nowrap;
+    }
+    &:not([autofill]),
+    &:not([breakpoint]),
+    &:not([autodense]) {
+        @include since(tb) {
+            flex-direction: row;
+        }
+    }
+    &[autofill] {
+        &>*:not([clearfix]) {
+            flex: 1;
+        }
+    }
+    &[autodense] {
+        &>*:not([clearfix]) {
+            flex: auto;
+        }
+    }
+    &[breakpoint="touch"] {
+        @include since(t) {
+            flex-direction: row;
+        }
+    }
+    &[breakpoint="tablet"] {
+        @include since(tb) {
+            flex-direction: row;
+        }
+    }
+    &[breakpoint="desktop"] {
+        @include since(d) {
+            flex-direction: row;
+        }
+    }
+}
+
+.center {
+    align-items: center;
+    justify-content: center;
+}
+
+.center-v {
+    align-items: center;
+}
+
+.center-h {
+    justify-content: center;
+}
+
+.top {
+    align-items: flex-start;
+}
+
+.left {
+    justify-content: flex-start;
+}
+
+.bottom {
+    align-items: flex-end;
+}
+
+.right {
+    justify-content: flex-end;
+}
+
+.separated {
+    justify-content: space-between;
+}
+
+.distributed {
+    justify-content: space-around;
+}
+
+.block {
+    width: 100%;
+}
+
+.half {
+    width: 100%;
+    @include since(t) {
+        width: 50%;
+    }
+}
+
+@each $class,
+$value in $breakpoint {
+    @include since ($class) {
+        @for $i from 1 through 20 {
+            @if $i==20 {
+                .block-#{$class} {
+                    width: grid($i);
+                }
+            }
+            @else if $i==10 {
+                .half-#{$class} {
+                    width: grid($i);
+                }
+            }
+            @else {
+                .base#{$i}-#{$class} {
+                    width: grid($i);
+                }
+            }
+        }
+        .hidden-#{$class} {
+            display: none;
+        }
+        .center-#{$class} {
+            align-items: center;
+            justify-content: center;
+        }
+        .center-v-#{$class} {
+            align-items: center;
+        }
+        .center-h-#{$class} {
+            justify-content: center;
+        }
+        .top-#{$class} {
+            align-items: flex-start;
+        }
+        .left-#{$class} {
+            justify-content: flex-start;
+        }
+        .bottom-#{$class} {
+            align-items: flex-end;
+        }
+        .right-#{$class} {
+            justify-content: flex-end;
+        }
+        .separated-#{$class} {
+            justify-content: space-between;
+        }
+        .distributed-#{$class} {
+            justify-content: space-around;
+        }
+    }
+}
+
+@each $class,
+$value in $breakpoint {
+    @if $class !='m' {
+        @include until ($class) {
+            .visible-#{$class} {
+                display: none;
+            }
+        }
+    }
+}

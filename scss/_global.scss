@@ -1,0 +1,29 @@
+// text
+$text-default: 16px;
+//Colors
+$primary: #000;
+// height button & input, select
+$height: 40px;
+//**************************** Default breakpoints in px *******************
+$mobile: 200px !default; //min width: 200px
+$touch: 520px !default; //min-width: 480px
+$tablet: 768px !default; //min-width: 768px
+$desktop: 980px !default; //min-width: 1024px
+$widescreen: 1280px !default; //min-width: 1300px
+//********************************* breakpoints only ***********************
+$only-touch: $tablet - 1 !default;
+$only-tablet: $desktop - 1 !default;
+$only-desktop: $widescreen - 1 !default;
+//****************************** Breakpoint names key map ******************
+$bp-mobile: 'm' !default;
+$bp-touch: 't' !default;
+$bp-tablet: 'tb' !default;
+$bp-desktop: 'd' !default;
+$bp-widescreen: 'hd' !default;
+//******************************* Breakpoint maps **************************
+$breakpoint: ( $bp-mobile: rem($mobile), $bp-touch: rem($touch), $bp-tablet: rem($tablet), $bp-desktop: rem($desktop), $bp-widescreen: rem($widescreen));
+$only-breakpoint: ( only-#{$bp-touch}: rem($only-touch), only-#{$bp-tablet}: rem($only-tablet), only-#{$bp-desktop}: rem($only-desktop));
+//***************************** layers *************************************
+$layer: ( index-1: 100, index-2: 200, index-3: 300, index-4: 400, index-5: 500, );
+$smooting-text: antialiased !default;
+$render-text: optimizeLegibility !default;
